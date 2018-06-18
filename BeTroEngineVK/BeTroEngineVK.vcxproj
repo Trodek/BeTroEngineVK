@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{405B184E-CAA0-4693-B6AB-6D7B0AC1B181}</ProjectGuid>
-    <RootNamespace>TroEngineVK</RootNamespace>
+    <RootNamespace>BeTroEngineVK</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
     <ProjectName>BeTroEngine</ProjectName>
   </PropertyGroup>
