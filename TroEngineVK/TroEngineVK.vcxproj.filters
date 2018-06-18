@@ -5,4 +5,23 @@
       <UniqueIdentifier>{178f1d58-5038-4e75-9661-2cdae58e2556}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Globals.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
