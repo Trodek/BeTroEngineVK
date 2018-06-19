@@ -9,17 +9,23 @@ class Module;
 class Application
 {
 public:
-	Application();
+	Application(int argc, char* args[]);
 	~Application();
 
-	bool Init();
-	update_status Update();
+	bool Awake();
+	bool Start();
+	bool Update();
 	bool CleanUp();
 
+	void ExitApp();
+
 private:
+	int				   argc;
+	char**			   args;
+
+	bool			   exit_app = false;
+
 	std::vector<Module*> modules;
-
-
 };
 
 extern Application* App;

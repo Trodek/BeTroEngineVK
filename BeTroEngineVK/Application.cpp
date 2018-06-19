@@ -1,27 +1,45 @@
 #include "Application.h"
 
-
-
-Application::Application()
+Application::Application(int argc, char* args[]) : argc(argc), args(args)
 {
 }
-
 
 Application::~Application()
 {
 }
 
-bool Application::Init()
+bool Application::Awake()
 {
-	return true;
+	bool ret = true;
+
+	return ret;
 }
 
-update_status Application::Update()
+bool Application::Start()
 {
-	return update_status::UPDATE_CONTINUE;
+	bool ret = true;
+
+	return ret;
+}
+
+bool Application::Update()
+{
+	bool ret = true;
+
+	if (exit_app)
+		ret = false;
+
+	return ret;
 }
 
 bool Application::CleanUp()
 {
-	return true;
+	bool ret = true;
+
+	return ret;
+}
+
+void Application::ExitApp()
+{
+	exit_app = true;
 }

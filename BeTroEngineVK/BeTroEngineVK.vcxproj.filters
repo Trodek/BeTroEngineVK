@@ -4,24 +4,27 @@
     <Filter Include="Source">
       <UniqueIdentifier>{178f1d58-5038-4e75-9661-2cdae58e2556}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\1. App =======================">
+      <UniqueIdentifier>{6c5a2ce2-e40d-44b4-be1e-ce85d0511aeb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source\1. App =======================</Filter>
     </ClCompile>
     <ClCompile Include="Globals.cpp">
-      <Filter>Source</Filter>
+      <Filter>Source\1. App =======================</Filter>
     </ClCompile>
-    <ClCompile Include="Application.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source\1. App =======================</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Globals.h">
-      <Filter>Source</Filter>
-    </ClInclude>
     <ClInclude Include="Application.h">
-      <Filter>Source</Filter>
+      <Filter>Source\1. App =======================</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Source\1. App =======================</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
