@@ -17,9 +17,9 @@ enum MainState
 	MAIN_EXIT
 };
 
-Application* App = NULL;
+Application* App = nullptr;
 
-int main(int argc, char ** argv)
+int main(int argc, char** argv)
 {
 	INTERNAL_LOG("Engine starting");
 
@@ -72,6 +72,7 @@ int main(int argc, char ** argv)
 
 			if (App->Update() == false)
 			{
+				INTERNAL_LOG("Application Update exits");
 				state = MainState::MAIN_CLEAN;
 			}
 
@@ -94,8 +95,8 @@ int main(int argc, char ** argv)
 		}
 	}
 
-	INTERNAL_LOG("Exiting engine");
-	delete App;
+	INTERNAL_LOG("Engine close");
+	RELEASE(App);
 
 	return main_return;
 }

@@ -4,27 +4,33 @@
     <Filter Include="Source">
       <UniqueIdentifier>{178f1d58-5038-4e75-9661-2cdae58e2556}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\1. App =======================">
+    <Filter Include="Source\2. Modules ====================">
+      <UniqueIdentifier>{7596ff66-c6f4-4988-9ffa-7992d261f494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\1. Application===================">
       <UniqueIdentifier>{6c5a2ce2-e40d-44b4-be1e-ce85d0511aeb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
-      <Filter>Source\1. App =======================</Filter>
+      <Filter>Source\1. Application===================</Filter>
     </ClCompile>
     <ClCompile Include="Globals.cpp">
-      <Filter>Source\1. App =======================</Filter>
+      <Filter>Source\1. Application===================</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
-      <Filter>Source\1. App =======================</Filter>
+      <Filter>Source\1. Application===================</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
-      <Filter>Source\1. App =======================</Filter>
+      <Filter>Source\1. Application===================</Filter>
     </ClInclude>
     <ClInclude Include="Globals.h">
-      <Filter>Source\1. App =======================</Filter>
+      <Filter>Source\1. Application===================</Filter>
+    </ClInclude>
+    <ClInclude Include="Module.h">
+      <Filter>Source\1. Application===================</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -19,11 +19,17 @@ public:
 
 	void ExitApp();
 
-private:
-	int				   argc;
-	char**			   args;
+	std::string GetAppName() const;
+	std::string GetAppVersion() const;
 
-	bool			   exit_app = false;
+private:
+	int				     argc = 0;
+	char**			     args = nullptr;
+
+	bool			     app_exit = false;
+
+	std::string		     app_name;
+	std::string			 app_version;
 
 	std::vector<Module*> modules;
 };

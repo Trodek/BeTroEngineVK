@@ -26,7 +26,7 @@ bool Application::Update()
 {
 	bool ret = true;
 
-	if (exit_app)
+	if (app_exit)
 		ret = false;
 
 	return ret;
@@ -41,5 +41,15 @@ bool Application::CleanUp()
 
 void Application::ExitApp()
 {
-	exit_app = true;
+	app_exit = true;
+}
+
+std::string Application::GetAppName() const
+{
+	return app_name;
+}
+
+std::string Application::GetAppVersion() const
+{
+	return app_version;
 }
