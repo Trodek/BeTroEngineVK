@@ -8,15 +8,16 @@
 class Module
 {
 public:
-	Module(const char* name)
+	Module(const char* name, bool start_enabled)
 	{
 		module_name = name;
+		SetEnabled(start_enabled);
 	}
 
 	virtual ~Module()
 	{}
 
-	virtual bool Awake()
+	virtual bool Awake(/* JSONDoc* config */) 
 	{
 		return true;
 	}
@@ -44,6 +45,11 @@ public:
 	virtual bool CleanUp()
 	{
 		return true;
+	}
+
+	virtual void SaveConfig(/* JSONDoc* config */)
+	{
+
 	}
 
 	//virtual void OnLoadConfig(JSON_Doc* config) {};
