@@ -5,6 +5,7 @@
 #include <vector>
 
 class Module;
+class ModuleWindow;
 
 class Application
 {
@@ -21,6 +22,16 @@ public:
 
 	std::string GetAppName() const;
 	std::string GetAppVersion() const;
+
+public:
+	// Application Modules
+
+	ModuleWindow * window = nullptr;
+
+	// -------------------
+
+private:
+	void AddModule(Module* mod);
 
 private:
 	int				     argc = 0;

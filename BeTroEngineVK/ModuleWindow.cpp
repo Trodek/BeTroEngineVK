@@ -35,13 +35,45 @@ bool ModuleWindow::Awake(/* JSONDoc* config */)
 		height = 500;
 
 		window_mode = SM_WINDOWED;
+		resizable = true;
 
 		/// --------------------------------------------------------------------
 
 		Uint32 window_flags = SDL_WINDOW_SHOWN | SDL_WINDOW_VULKAN;
 
+		switch (window_mode)
+		{
+		case SM_NULL:
+			break;
+		case SM_WINDOWED:
+			break;
+		case SM_WINDOWED_BORDERLESS:
+			window_flags |= SDL_WINDOW_BORDERLESS;
+			break;
+		case SM_FULLSCREEN:
+			window_flags |= SDL_WINDOW_FULLSCREEN;
+			break;
+		case SM_FULLSCREEN_DESKTOP:
+			window_flags |= SDL_WINDOW_FULLSCREEN_DESKTOP;
+			break;
+		default:
+			break;
+		}
 
+		if(resizable)
+			window_flags |= SDL_WINDOW_RESIZABLE;
 
+		window = SDL_CreateWindow(current_title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, window_flags);
+
+		if (window == nullptr)
+		{
+			INTERNAL_LOG("Window could not be created! SDL Error: %s\n", SDL_GetError());
+			ret = false;
+		}
+		else
+		{
+			INTERNAL_LOG("Window successfully created!\n");
+		}
 	}
 
 
@@ -50,7 +82,16 @@ bool ModuleWindow::Awake(/* JSONDoc* config */)
 
 bool ModuleWindow::CleanUp()
 {
-	return false;
+	INTERNAL_LOG("Destroying Window Module....\n");
+
+	if (window != nullptr)
+	{
+		SDL_DestroyWindow(window);
+	}
+
+	SDL_Quit();
+
+	return true;
 }
 
 void ModuleWindow::SetTitle(const char * new_title)
